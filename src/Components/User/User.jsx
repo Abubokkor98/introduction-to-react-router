@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 export default function User({user}) {
     const {id, name, email, phone} = user;
@@ -8,6 +9,10 @@ export default function User({user}) {
         <h2 className='font-bold text-2xl'>{name}</h2>
         <p>{email}</p>
         <p>{phone}</p>
+       {/* <Link to={`/user/${id}`} className='btn'> Show Details</Link> */}
+       <Link to={`/user/${id}`}>
+       <button className='btn'>show details</button>
+       </Link>
     </div>
 </div>
   )
